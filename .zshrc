@@ -71,7 +71,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git starship)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,4 +102,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
+function retrieve() {
+	sf project retrieve start -d "$1" --ignore-conflicts
+}
+
+function deploy() {
+	sf project deploy start -d "$1" --ignore-conflicts
+}
+
 SF_AC_ZSH_SETUP_PATH=/Users/uber/Library/Caches/sf/autocomplete/zsh_setup && test -f $SF_AC_ZSH_SETUP_PATH && source $SF_AC_ZSH_SETUP_PATH; # sf autocomplete setup
+
+eval "$(starship init zsh)"
