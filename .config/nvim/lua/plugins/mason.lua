@@ -1,6 +1,6 @@
 return {
-    "williamboman/mason.nvim",
-    opts = {
-	lazy = false
-    }
+  "williamboman/mason.nvim",
+  opts = {
+    lazy = false,
+  },
 }
