@@ -10,5 +10,6 @@
   startup_mode = "Maximized"
   title = "Terminal"
   decorations_theme_variant = "Dark"
-[cursor]
-  style = { shape = "Block", blinking = "On" }
+[cursor.style]
+  shape = "Block"
+  blinking = "Always"
