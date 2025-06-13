@@ -100,12 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 function retrieve() {
 	sf project retrieve start -d "$1" --ignore-conflicts
 }
-
 function deploy() {
 	sf project deploy start -d "$1" --ignore-conflicts
 }
