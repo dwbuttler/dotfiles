@@ -1,0 +1,16 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[package]
+disabled = true
+
+[custom.sf_connected_org]
+command = '''
+cat .sf/config.json | jq -r '.["target-org"]'
+'''
+detect_files = ['sfdx-project.json', '.sf/config.json']
+ignore_timeout = true
+style = 'bold blue'
+shell = 'zsh'
+symbol = '☁️  '
