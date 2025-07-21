@@ -1,6 +1,6 @@
 # Add nvim to path.
-export PATH=/opt/nvim-linux64/bin:$PATH
-
+export JAVA_HOME=/opt/homebrew/opt/java
+export PATH=/opt/nvim/bin:$JAVA_HOME:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
